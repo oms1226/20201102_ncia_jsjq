@@ -188,6 +188,33 @@
         arr1[2] = 800;
         console.log(arr1);//(3) ["JS", true, 800]
 
+        //배열(array) 2
+        //[] 안에 초기값 삽입
+        //var 배열변수명 = [값2, 값2, ...];
+        var arr2 = ['사과','배','포도','바나나'];
+        console.log(arr2, typeof(arr2));//(4) ["사과", "배", "포도", "바나나"], Object
+
+        //배열(array) 3
+        //new Array(값2, 값2, ...); 명령어 이용
+        //var 배열변수명 = new Array(값2, 값2, ...);
+        var arr3 = new Array('남준','태형','정국');
+        console.log(arr3, typeof(arr3));//(3) ["남준", "태형", "정국"], Object
+
+        //인덱싱(Indexing): 각 요소 접근
+        //배열명[인덱스]
+        console.log(arr3[2]);
+        console.log(arr3[1]);
+        console.log(arr3[0]);
+
+        //배열 전체 길이는? 배열명.length
+        console.log('arr3의 전체 길이 = ', arr3.length);
+
+        //for 문 이용해서 배열의 전체 요소 출력하기
+        var arr4 = new Array('남준','태형','정국','지민','진');
+        for (var i=0; i<arr4.length; i++) {
+            document.write("<p>" + i + "번째 => " + arr4[i]);
+        }
+
     </script>
 
     
