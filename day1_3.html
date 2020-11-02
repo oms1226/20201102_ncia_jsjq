@@ -122,6 +122,27 @@
             cnt ++;
         }
         console.log("1~100 까지의 합은? " + sum);
+
+        //do ~ while
+        /*
+        do {
+            명려문
+        } while(조건식);
+        */
+        var n = 1;
+        do {
+            document.write("<h3>"+n+"</h3>");
+            n++;
+        } while(n<20);
+
+        //퀴즈 : do ~ while 문을 이용하여 9단만 출력하기
+        document.write("<hr><h1>9단 출력</h1>");
+        n = 1;
+        var gugu = 9;
+        do {
+            document.write("<p>"+gugu+" X " + n + " = " + gugu*n + "</p>");
+            n ++;
+        } while(n<=9);
     </script>
 
     
