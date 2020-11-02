@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>탭 부분 내용</title>
+
+    <!-- external 방식
+        별도의 js 파일을 연결하여 실행하는 방식 head 영역에 삽입
+        <script src="js 파일 경로"></script>
+     -->
+    <script src="test.js"></script>
 </head>
 <body>
     실제 내용
@@ -60,5 +66,25 @@
         <h4>제목4</h4>
         <h5>제목5</h5>
         <h6>제목6</h6>
+
+        <!-- 인라인 방식으로 js 삽입하기 -->
+            <!-- 
+                <태그 이벤트="스크립트문법">내용</태그>
+             -->
+            <!--
+                allert(메세지);
+                console.log(메세지)ㅣ
+            -->
+        <button onclick="alert('Hello world in Inline');console.log('Hello world in Inline')">클릭</button>
+
+        <!-- Internal 방식으로 js 삽입하기
+            <script>
+                스크립트 명령어
+            </script>
+         -->
+        <script>
+            alert('Hello world in Internal');
+            console.log('Hello world In Internal')
+        </script>
 </body>
 </html>
