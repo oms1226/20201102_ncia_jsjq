@@ -8,16 +8,33 @@
     <h1>JS</h1>
     <hr>
     <div id="textBox">
-        <h2>textbox</h2>
+        <h2>textBox</h2>
     </div>
 <body>
     <!-- js 출력문 -->
     <script>
+        /*
         alert('경고메시지');
         console.log('메시지출력');
         document.write('브라우저 출력문');
         // document.getElementById("id명").innerHTML = 메시지;
         document.getElementById("textBox").innerHTML = "안녕하세요";
+        */
+       // 변수
+       // var 변수명 = 리터럴값(논리형, 문자열, 정수, 실수);
+       // 자료형 확인하기 typeof(변수)
+       var x = 123;
+       var y = 123.4567;
+       var z = true;
+       var userName = '가나다라마바사';
+       var yourName;
+       
+       console.log(x, typeof(x));//123 "number"
+       console.log(y, typeof(y));//123.4567 "number"
+       console.log(z, typeof(z));//true "boolean"
+       console.log(userName, typeof(userName));//가나다라마바사 string 
+       console.log(yourName, typeof(yourName));//undefined "undefined"
+
     </script>
 </body>
 </html>
