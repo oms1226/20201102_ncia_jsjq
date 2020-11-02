@@ -57,6 +57,16 @@
         }
 
         //switch .. case .. break .. default
+        /*
+            switch (변수나수식) {
+                case 값1:
+                    명령문1;
+                    break;
+                ...
+                default:
+                    그밖의 명령문
+            }
+        */
         var x = 40;
         switch(x) {
             case 10:
@@ -71,6 +81,49 @@
             default:
                 document.write("x는 10도 20도 30도 아니다.");
         }
+
+        //반복문 while
+        /*
+        while(조건식) {
+            명령문
+        }
+        */
+        //1~10까지 출력
+        var cnt = 1;
+        while (cnt<=10) {
+            console.log(cnt);
+            cnt ++;
+        }
+        console.log("while 테스트 종료");
+
+        var cnt = 10;
+        while (cnt>0) {
+            console.log(cnt);
+            cnt --;
+        }
+        console.log("while 테스트 종료");
+
+        // 퀴즈 : 1~50까지에서 3의 배수만 출력하기
+        // 숫자%3 == 0
+        var cnt = 1;
+        while (cnt<=50) {
+            if (cnt%3 == 0) {
+                console.log(cnt);
+            }
+            cnt ++;
+        }
+        console.log("while 테스트 종료");
+
+        // 퀴즈 : 1~100 까지의 합 구하기
+        cnt = 1;
+        var sum = 0;
+        while (cnt<=100) {
+            sum += cnt;
+            cnt ++;
+        }
+        console.log("1~100 까지의 합은? " + sum);
     </script>
+
+    
 </body>
 </html>
