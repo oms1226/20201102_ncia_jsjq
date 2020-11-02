@@ -69,6 +69,29 @@
         console.log(String(a), typeof(String(a)))
         console.log(b, typeof(b))
         console.log(Number(a), typeof(Number(a)))
+
+        // 연산자
+        // 산술, 대입
+        var n1 = 100;
+        var n2 = 8;
+        document.write("<hr>");
+        document.write("n1 + n2 = ", n1+n2, "<br>");
+        document.write("n1 - n2 = ", n1-n2, "<br>");
+        document.write("n1 & n2 = ", n1&n2, "<br>");
+        document.write("n1 / n2 = ", n1/n2, "<br>");
+        document.write("n1 % n2 = ", n1%n2, "<br>");
+        //후위 증감 연산자
+        document.write("n1++ = ", n1++, "<br>");//100 => 결국 증감하지 않고, 처리되고, 이후에 증감된다.
+        document.write("n1 = ", n1, "<br>");//101
+        document.write("++n1 = ", ++n1, "<br>");//102 => 바로 증감하여 증간된 값이 출력된다.
+        document.write("n1 = ", n1, "<br>");//102
+
+        //대입 연산자 => +=, -=, *=
+        n1 = 20;
+        n2 = 10;
+        n1+=1; //++n, n = n+1;
+        console.log(n1+=1);//22
+        console.log(n1*=7);//154
 </script>
 </body>
 </html>
