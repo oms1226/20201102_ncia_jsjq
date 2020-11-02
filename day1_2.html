@@ -111,8 +111,14 @@
         //조건식을 만족하면, 명령문1, 불만족하면 명령문2
         var name1="홍길동";
         var age1=12;
-        (age1>19)? console.log("성인"):console.log("미성년");    
-        ((name1=="홍길동") && (age1==12))? console.log("정답"):console.log("오답");    
+        (age1>19)? console.log("성인"):console.log("미성년");//미성년
+        ((name1=="홍길동") && (age1==12))? console.log("정답"):console.log("오답");//정답
+
+        //입력문
+        //var 변수명 = prompt(메세지);
+        //변수명의 데이터형은 string 문자열
+        var msg = prompt('당신의 이름은?');
+        document.write("<h1>"+msg+"님 안녕하세요...</h1>");
     </script>
 </body>
 </html>
