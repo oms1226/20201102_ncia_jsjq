@@ -50,6 +50,25 @@
         ++J
 	        n+++
         */
-    </script>
+
+        //자료형 변환 => 캐스팅
+        var aa = 100; //Number
+        var bb = '50'; //String
+        //자동형 변환
+        console.log("aa+bb=", aa+bb);//aa+bb= 10050
+        console.log("aa-bb=", aa-bb);//aa-bb= 50
+        console.log("aa*bb=", aa*bb);//aa*bb= 5000
+
+        //강제적 형 변환
+        //Number() 숫자로 변경
+        //String() 문자열로 변경
+        //문자열 숫자 => 숫자형
+        var a = 120;
+        var b = "34.567";
+        console.log(a, typeof(a))
+        console.log(String(a), typeof(String(a)))
+        console.log(b, typeof(b))
+        console.log(Number(a), typeof(Number(a)))
+</script>
 </body>
 </html>
