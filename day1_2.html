@@ -86,12 +86,33 @@
         document.write("++n1 = ", ++n1, "<br>");//102 => 바로 증감하여 증간된 값이 출력된다.
         document.write("n1 = ", n1, "<br>");//102
 
-        //대입 연산자 => +=, -=, *=
+        //대입 연산자 => +=, -=, *=, /=
         n1 = 20;
         n2 = 10;
         n1+=1; //++n, n = n+1;
         console.log(n1+=1);//22
         console.log(n1*=7);//154
-</script>
+
+        // 비교 > , < , == , <= , !=, >= => true/false
+        // 논리 && 모두 참인 경우만 true,
+        // || 하나라도 참인 경우는 true => true/false
+        // ! not
+        var xx = 50, yy=10; 
+        console.log("=============");
+        console.log(xx>=yy)
+        console.log(xx==yy)
+        console.log("=============");
+        console.log((xx>=yy) && (xx!=yy))//true
+        console.log((xx==yy) && (xx<yy))//false
+
+        //조건 연산자
+        //삼항연산자, 물음표 연산자
+        //(조건식)?명령문!:명령문2;
+        //조건식을 만족하면, 명령문1, 불만족하면 명령문2
+        var name1="홍길동";
+        var age1=12;
+        (age1>19)? console.log("성인"):console.log("미성년");    
+        ((name1=="홍길동") && (age1==12))? console.log("정답"):console.log("오답");    
+    </script>
 </body>
 </html>
