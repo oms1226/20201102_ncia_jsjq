@@ -124,7 +124,12 @@
         //var 변수명 = confirm(메세지);
         //변수명의 데이터형은 boolean
         var ans = confirm("javascript는 인터프린터언어이다.");
-        document.write(ans);
+        document.write(ans+"<br>");
+
+        //퀴즈 : 나이를 입력 받은 후 태어난 년도를 출력하여라.
+        var yourAge = prompt('당신의 나이은?');
+        var year = 2020 - yourAge;
+        document.write("태어난 년도는 " + year + "<br>");
     </script>
 </body>
 </html>
