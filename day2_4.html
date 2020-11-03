@@ -38,6 +38,17 @@
         document.write("<p>" + msgArr + "</p>");
         document.write("<p>" + typeof(msgArr) + "</p>");
         document.write("<p>" + msgArr.length + "</p>");
+
+        //Number.isNaN(변수) => NaN이 인가? true/false
+        //Number.isFinite(변수) => 숫자값이 인가? true/false
+        //NaN => Not a Number. 숫자도 문자도 아닌 것. None
+        var x = '가나다';
+        var y = 12345;
+        var z = NaN;
+        console.log(Number.isNaN(x), Number.isNaN(y), Number.isNaN(z));//false false true
+        console.log(Number.isFinite(x), Number.isFinite(y), Number.isFinite(z));//false true false
+        
+
     </script>
 </body>
 </html>
