@@ -82,7 +82,19 @@
         arr5.reverse()
         console.log('reversed arr5 = ', arr5);//[55, 45, 400, 3, 2, 100]
 
-
+        // 배열안에 특정값이 있는지 확인하기 1
+        // 배열변수.indexOf(값1, 값2) 
+        // 위치값이 반환. 배열 안에 원소가 없으면 -1
+        var arr6 = [10, 20, 30, 40, 50];
+        console.log('arr6 = ', arr6);//[10, 20, 30, 40, 50]
+        console.log(arr6.indexOf(30));//2
+        console.log(arr6.indexOf(100));//-1
+        
+        // 배열안에 특정값이 있는지 확인하기 2
+        // 배열변수.includes(값) 
+        // true / false 결과값
+        console.log(arr6.includes(30));//true
+        console.log(arr6.includes(100));//false
     </script>
 </body>
 </html>
