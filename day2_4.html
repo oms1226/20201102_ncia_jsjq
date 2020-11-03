@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌트인 객체</title>
+</head>
+<body>
+    <script>
+        // String 객체
+        // length => 글자 길이
+        // 배열처럼 인덱싱 기능
+        var myText1 = "가나다라마바사";
+        var myText2 = new String('도레미파솔라시도');
+        console.log('myText1의 첫번째 글자 = ', myText1[0])
+        console.log('myText1의 마지막 글자 = ', myText1[myText1.length-1])
+        // 글자 한글자씩 출력하기
+        for (var i=0; i<myText2.length; i++) {
+            console.log(myText2[i]);
+        }
+
+    </script>
+</body>
+</html>
