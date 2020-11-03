@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        // String 객체
+    // String 객체
         // length => 글자 길이
         // 배열처럼 인덱싱 기능
         var myText1 = "가나다라마바사";
@@ -19,7 +19,7 @@
             console.log(myText2[i]);
         }
 
-        //메소드 체이닝 방식 :   문자열변수.메소드명1().메소드명2() 
+    //메소드 체이닝 방식 :   문자열변수.메소드명1().메소드명2() 
         // bold() : 진하게 
         // strike() : 취소선  
         // italics() : 기울임글꼴
@@ -42,12 +42,62 @@
         //Number.isNaN(변수) => NaN이 인가? true/false
         //Number.isFinite(변수) => 숫자값이 인가? true/false
         //NaN => Not a Number. 숫자도 문자도 아닌 것. None
+            //외부 파일에서 데이타 임포트하는 경우
         var x = '가나다';
         var y = 12345;
-        var z = NaN;
+        var z = NaN;    
         console.log(Number.isNaN(x), Number.isNaN(y), Number.isNaN(z));//false false true
         console.log(Number.isFinite(x), Number.isFinite(y), Number.isFinite(z));//false true false
         
+    // 수학에 관련된 다양한 기능을 제공하는 객체이다
+        // Math.max(값1,값2..) => 최댓값 추출
+        // Math.min(값1,값2..) => 최솟값 추출
+        // Math.round(값/수식) => 반올림
+        // Math.floor(값/수식) => 내림
+        // Math.ceil(값/수식) => 올림
+        // Math.random(값/수식) => 0~1 사이의 난수 발생 
+        // Math.abs(값/수식) => 양수값 반환 
+        // Math.PI =>  원주율 표시
+        console.log(Math.max(10, 30));
+        console.log(Math.min('가', 10, 30));//->NaN
+        console.log(Math.PI);
+        // 난수 발생기 => 실수
+        console.log(Math.random());
+        console.log(Math.random());
+        console.log(Math.random());
+        // 0~100 사이의 난수 발생
+        console.log(Math.random()*100);
+        console.log(parseInt(Math.random()*100));
+
+    // 퀴즈 - 로또번호 
+        // 1~45 , 중복값 없음, 6개의 숫자 
+        // 1 45 10 33 34 20 (O)
+        // 1 45 10 1  34 20 (O)
+        // 배열이름.includes(값) => 배열안에 값이 있다면 true 없다면 false
+        var lottoList = [];
+        var count = 0;
+        var temp;
+        while (count < 6) {
+            // 1~45의 숫자중 하나 뽑기
+            temp = parseInt(Math.random() * (45 - 1 + 1) + 1);
+            // 중복값 검사 
+            if (lottoList.includes(temp) == false) {
+                lottoList.push(temp);
+                count++;
+            }
+        }
+        document.write('<h3> 이번주 로또번호 => ' + lottoList + '</h3>');
+        // 원소값이 배열안에 있는지?
+        // 배열이름.includes(값)
+        // 값 in 배열이름
+        var testList = [1, 2, 4];
+        console.log(testList.includes(1)); // true
+        console.log(testList.includes(100)); // false
+        console.log(100 in testList); // false
+        console.log(1 in testList); // true
+
+        var lottoList2 = [];
+        var count2 = 0;
 
     </script>
 </body>
