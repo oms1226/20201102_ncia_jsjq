@@ -67,11 +67,41 @@
         }
 
         //with 구문을 이용해서 객체 속성 접근
+        //with 안에서 속성으로 바로 접근 가능
         with (Food) {
             console.log(menu);
             console.log(kcal);
             console.log(price);
         }
+
+        // 생성자 함수를 이용해서 객체 생성
+        /*
+            // 객체 생서자함수 정의
+            function 객체생성자함수명(매개변수) {
+                var 객체명 = {
+                    키:값 ...
+                }
+                return 객체명;
+            };
+
+            //객체 생성
+            // var 객체명 = 객체생성자함수명(값1, 값2 ...);
+        */
+        //영화 객체 만들기
+        function MakeMovie(title, kind, country) {
+            var Movie = {
+                Title:title,
+                Kind:kind,
+                Country:country
+            }
+            return Movie;
+        }
+
+        var movie1 = MakeMovie("극한직업", "코미디", "한국");
+        var movie2 = MakeMovie("겨울왕국2", "애니메이션", "미국");
+        console.log(movie1, typeof(movie1));
+        console.log(movie2, typeof(movie2));
+
     </script>
 </body>
 </html>
