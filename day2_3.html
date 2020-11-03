@@ -102,6 +102,68 @@
         console.log(movie1, typeof(movie1));
         console.log(movie2, typeof(movie2));
 
+        // 객체에 속성 + 매서드 정의
+        /*
+            function 객체생성자함수명(매개변수) {
+                var 객체명 = {
+                    //속성 지정
+                    키:값 ... ,
+                    //메서드 정의
+                    메서드명:function(매겨변수) {
+                        명령문
+                    }
+                }
+                return 객체명;
+            };
+
+            //객체 생성
+            // var 객체명 = 객체생성자함수명(값1, 값2 ...);
+
+            //객체 속성 접근
+            객체명.속성 || 객체명[속성]
+
+            //객체 메서드
+            객체명.메서드명
+        */        
+        //동물 객체
+        //속성 => 종류, 성별, 나이, 이름
+        //메소드 => 속성출력, 달린다, 먹는다, 잔다
+
+        //객체색성자 함수
+        function MakeAnimal(kind, genger, age, name) {
+            //속성 정의
+            var Animal = {
+                Kind:kind,
+                Gender:genger,
+                Age:age,
+                Name:name,
+                //속성 출력 메서드 정의
+                Print_info: function() {
+                    // this.속성(키) 접근 가능
+                    console.log(" 종류 => ", this.Kind);
+                    console.log(" 성별 => ", this.Gender);
+                    console.log(" 나이 => ", this.Age);
+                    console.log(" 이름 => ", this.Name);
+                },
+
+                //먹는다 메소드 정의 
+                Eat: function(food) {
+                    console.log(this.Name, ' 가(이) ',  food.menu, ' 을(를) 먹는다.');
+                }
+            }
+
+            //객체 반환
+            return Animal;
+        };
+
+        //동물 객체 생성
+        var dog = MakeAnimal('강아지', '여', 12, '멍멍이');
+        console.log(dog);
+        console.log(dog.Kind);
+        dog.Print_info();
+        dog.Eat(Food);
+        
+
     </script>
 </body>
 </html>
