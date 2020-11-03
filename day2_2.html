@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        //이름이 있는 함수
+        /*
+        function 함수명(매개변수) {
+            명령문
+            return 문
+        }
+        */
+        //매개변수 x, 반환값 x
+        //함수 정의
+        function message() {
+            console.log('message function 안 1');
+            console.log('message function 안 2');
+            console.log('message function 안 3');
+        }
+        //함수 호출()
+        message();
+        message();
+
+        //매개변수 o, 반환값 x
+        //함수 정의 - 두수의 사친연산
+        function cal(x, y) {
+            console.log('두수의 사칙연산');
+            console.log(x, ' + ', y, ' = ', x+y);
+            console.log(x, ' - ', y, ' = ', x-y);
+            console.log(x, ' * ', y, ' = ', x*y);
+            console.log(x, ' / ', y, ' = ', x/y);
+        }
+        //함수 호출
+        cal(100, 50);
+        cal(55, 3);
+
+        //매개변수 x, 반환값 o
+        //함수 정의
+        function sum100() {
+            var result = 0;
+            for (var i=1; i<=100; i++) {
+                result += i;
+            }
+            return result;
+        }
+        document.write('<h2>1~100까지의 합은?' + sum100() + '</h2>');
+
+        //매개변수 o, 반환값 o
+        //함수 정의
+        function maxNumber(x, y) {
+            if (x>y) {
+                return x;
+            } else if (x<y) {
+                return y;
+            } else {
+                return "두수 같다";
+            }
+        }
+        document.write('<h2>함수호출1 ' + maxNumber(100, 50) + '</h2>');
+        document.write('<h2>함수호출2 ' + maxNumber(20, 50) + '</h2>');
+        document.write('<h2>함수호출3 ' + maxNumber(40, 40) + '</h2>');
+
+    </script>
+</body>
+</html>
