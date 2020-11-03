@@ -64,6 +64,30 @@
         document.write('<h2>함수호출2 ' + maxNumber(20, 50) + '</h2>');
         document.write('<h2>함수호출3 ' + maxNumber(40, 40) + '</h2>');
 
+        //가변매개변수 => arguments 배열
+
+        //매개변수가 고정인 형태의 함수 정의
+        function userName(user1, user2) {
+            console.log(user1, '님 안녕하세요');
+            console.log(user2, '님 안녕하세요');
+        }
+        userName('홍길동', '성춘향');
+        userName('홍길동');//undefined "님 안녕하세요"
+
+        //매개변수가 가변인 형태의 함수 정의
+        function userName2() {
+            for (const key in arguments) {
+                if (arguments.hasOwnProperty(key)) {
+                    const element = arguments[key];
+                    console.log(element, '님 안녕하세요 in 가변형태함수');
+                }
+            }
+        }
+        userName2('김길동');
+        userName2('홍길동', '성춘향');
+        userName2('박지민', '홍길동', '성춘향');
+
+
     </script>
 </body>
 </html>
