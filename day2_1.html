@@ -95,6 +95,22 @@
         // true / false 결과값
         console.log(arr6.includes(30));//true
         console.log(arr6.includes(100));//false
+
+        //퀴즈 : 5개 입력 받아서 배열 생성
+        //조건 : 중복값은 없어야 한다.
+        //1단계 => 빈배열 생성
+        var arr7 = [];
+        var cnt = 1;
+        //2단계 => 반복문을 이용해서 배열에 삽입
+        while(cnt<=5) {
+            var input = prompt("뱌열 값 입력 ... ");
+            if (arr7.includes(input) === false) {
+                arr7.push(input);
+                cnt++;
+            }
+        }
+        console.log('arr7 = ', arr7);
+
     </script>
 </body>
 </html>
