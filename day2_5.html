@@ -20,8 +20,8 @@
             <li>목록3</li>
         </ul>
         <ol>
-            <li>목록A</li>
-            <li>목록B</li>
+            <li class="myList">목록A</li>
+            <li class="myList">목록B</li>
             <li>목록C</li>
             <li>목록D</li>
         </ol>
@@ -43,8 +43,10 @@
         console.log(liNode[5].textContent);//목록C
         liNode[6].innerHTML = '새로운 글내용';
 
-
-
+        //클래스로 찾기 => 배열
+        var classNode = document.getElementsByClassName('myList');
+        console.log(classNode);
+        classNode[0].innerHTML = "New";
 
     </script>
 </body>
