@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정의 객체</title>
+</head>
+<body>
+    <script>
+        //리터럴 방식의 객체 생성 1 - 초기값 지정 방식
+        //자동차 객체
+        //속성(특징) : 이름, 색상, 제조사
+        /*
+            var 객체명 = {속성:값, ...}
+        */
+        var Car  = {Name:'산타페', Color:'블랙', Brand:'현대'};
+        console.log(Car, typeof(Car));
+
+        //생성된 객체의 속성 인덱싱
+        //객체명['키'] => 데이타(값)
+        //객체명.키 => 데이타(값)
+        //console.log('이름 => ', Car[Name]);//day2_3.html:22 Uncaught ReferenceError: Name is not defined
+        console.log('이름 => ', Car['Name']);
+        console.log('색상 => ', Car.Color);
+        console.log('제조사 => ', Car.Brand);
+
+        //리터럴 방식의 객체 생성 2 - 빈 객체 생성 후 속성과 값 추가
+        //var 객체명 = new Objcet();
+        //객체명['속성'] = 값;
+        //나라 객체화 - 나라명, 국화, 수도
+        var Country = new Object();
+        console.log(Country, typeof(Country));
+        Country['Name'] = '한국';
+        Country['Flower'] = '무궁화';
+        Country['Capital'] = '서울';
+        console.log(Country);
+        console.log(Country.Name);
+
+        //객체의 속성 추가
+        console.log(Car);
+        Car['Year'] = 2018;
+        console.log(Car);
+
+        //객체의 속성 삭제
+        // delete 객체명.속성;
+        // delete 객체명['속성'];
+        delete Car.Brand;
+        delete Car['Year'];
+        console.log(Car);
+
+        // for .. in 을 이용해서 객체 속성 접근
+        /*
+        for (var key in 객체명) {
+            객체명[키변수];
+        }
+        */
+        var Food = new Object();
+        Food['menu'] = '짜장면';
+        Food['kcal'] = 500;
+        Food['price'] = '6000원';
+        for (const key in Food) {
+            if (Food.hasOwnProperty(key)) {
+                const element = Food[key];
+                console.log("==============")
+                console.log(element);
+            }
+        }
+
+        //with 구문을 이용해서 객체 속성 접근
+        with (Food) {
+            console.log(menu);
+            console.log(kcal);
+            console.log(price);
+        }
+    </script>
+</body>
+</html>
