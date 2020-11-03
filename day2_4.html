@@ -69,11 +69,16 @@
         console.log(Math.random()*100);
         console.log(parseInt(Math.random()*100));
 
+        //min ~ max 사이의 정수
+        //parsetInt(Math.randon()*(max-min+1)+min)
+
     // 퀴즈 - 로또번호 
         // 1~45 , 중복값 없음, 6개의 숫자 
         // 1 45 10 33 34 20 (O)
         // 1 45 10 1  34 20 (O)
         // 배열이름.includes(값) => 배열안에 값이 있다면 true 없다면 false
+
+        //로또 배열 생성
         var lottoList = [];
         var count = 0;
         var temp;
@@ -99,6 +104,27 @@
         var lottoList2 = [];
         var count2 = 0;
 
+    //Date 객체
+        // var 날짜변수 = new Date();
+        //   날짜변수.getFullYear() 
+        //   날짜변수.getMonth() : 0~11 출력 
+        //   날짜변수.getDate()
+        //   날짜변수.getDay() : 0(일요일)~6(토요일) 출력 
+        //   날짜변수.getHours()
+
+        var today = new Date();
+        console.log(today, typeof(today));//Tue Nov 03 2020 17:13:01 GMT+0900 (대한민국 표준시) "object"
+        console.log(today.getFullYear());//2020
+        console.log(today.getMonth());//10 ; 0이 1월달
+        console.log(today.getDate());//3
+        console.log(today.getDay());//2 ; 0이 일요일
+
+        var dayArr = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+        console.log(dayArr[today.getDay()]);
+
+        console.log(today.getHours(), '시');
+        console.log(today.getMinutes(), '분');
+        console.log(today.getSeconds(), '초');
     </script>
 </body>
 </html>
