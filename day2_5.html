@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 객체</title>
+    <style>
+        #conBox { border:1px solid black; }
+    </style>
+</head>
+<body>
+    <!-- div#conBox>(h2+(ul>li*3)+(ol>li*4)) -->
+
+    <hr>
+    <div id="conBox">
+        <h2>제목</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ul>
+        <ol>
+            <li>목록A</li>
+            <li>목록B</li>
+            <li>목록C</li>
+            <li>목록D</li>
+        </ol>
+    </div>
+    <hr>
+
+    <script>
+        // id로 찾기 
+        // document.getElementById('아이디이름')
+        var divNode = document.getElementById('conBox');
+        console.log(divNode);
+        // divNode.innerHTML = "내용 교체";
+
+        //태그 이름으로 찾기 => 배열
+        //document.getElementsByTagName(태그) => 배열
+        var liNode = document.getElementsByTagName('li');
+        console.log(liNode);
+        console.log(liNode[0].textContent);//목록1
+        console.log(liNode[5].textContent);//목록C
+        liNode[6].innerHTML = '새로운 글내용';
+
+
+
+
+    </script>
+</body>
+</html>
