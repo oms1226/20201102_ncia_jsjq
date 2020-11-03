@@ -19,6 +19,25 @@
             console.log(myText2[i]);
         }
 
+        //메소드 체이닝 방식 :   문자열변수.메소드명1().메소드명2() 
+        // bold() : 진하게 
+        // strike() : 취소선  
+        // italics() : 기울임글꼴
+        // fontsize(숫자) : 글자 크기 
+        // fontcolor(색상값) : 글자색상변경
+        // sup() / sub() : 윗첨자, 아래첨자 
+        // toLocaleUpperCase() / .toLocaleLowerCase() : 모두 대문자, 모두 소문자로 변경
+        var msg = 'Hello World';
+        document.write("<p>" + msg + "</p>");
+        document.write("<p>" + msg.bold() + "</p>");
+        document.write("<p>" + msg.bold().fontcolor('red') + "</p>");
+        document.write("<p>" + msg.toLocaleUpperCase().fontsize(7) + "</p>");
+
+        //문자변수명.split() => 낱글자로 배열 생성
+        var msgArr = msg.split(' ');//Hello,World
+        document.write("<p>" + msgArr + "</p>");
+        document.write("<p>" + typeof(msgArr) + "</p>");
+        document.write("<p>" + msgArr.length + "</p>");
     </script>
 </body>
 </html>
