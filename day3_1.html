@@ -54,6 +54,14 @@
             alert('Click-4');
             console.log('Click-4');
         }
+
+        //태그이름으로 접근하기 => 배열
+        var btn5 = document.getElementsByTagName('button');
+        console.log(btn5);
+        btn5[3].onclick = function() {
+            alert('Click-5');
+            console.log('Click-5'); 
+        }
     </script>
 </body>
 </html>
