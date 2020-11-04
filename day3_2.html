@@ -21,11 +21,11 @@
     <h1>JQ 설치 확인</h1>
     <h2>h1태그가 보이지 않으면 jquery 설치 성공</h2>
     <hr>
-    <div id="wrap">
-        <p>JQuery Selector</p>
+    <div id="wrap"> <!-- div#wrap p -->
+        <p>JQuery Selector</p><!-- div#wrap>p or #wrap>p -->
         <div id="content">
-            <h1>content</h1>
-            <p>가나다라마바사아자카타</p>
+            <h3>content</h3>
+            <p>가나다라마바사아자카타</p><!-- div#wrap > div#content > p -->
             <p>ABCDEFGHIJKLMN</p>
         </div>
         <div id="id">
@@ -79,6 +79,26 @@
                 // 클래스 선택자(.클래스)
                 // $('.클래스명').css('속성', '값');
                 $('.seoul').css('backgroundColor', 'black').css('color','white');
+
+            // 선택자 조합 
+                // 그룹선택자 - 선택자1, 선택자2 : 동시에 여러 태그를 선택할 때 사용한다
+                // 자손선택자 - 선택자1 > 선택자2 : 태그의 바로 하위의 태그들을 선택할 때 사용한다.
+                // 후손선택자 - 선택자1 선택자2 : 태그 내부의 모든 태그들을 선택할 때 사용한다.
+
+                // 그룹선택자 - 선택자1, 선택자2 .. 쉽표를 이용해서 선택자를 그룹화
+                // $('선택자1, 선택자2...').css('속성', '값');
+                $('h2,h3').css('backgroundColor', 'yellowgreen')
+
+                // 자손선택자 - 선택자1 > 선택자2 : 트리구조
+                // textDecoration - 밑줄 속성. underline/line-through/none
+                $('div#wrap>p').css('fontWeight', 'bold').css('textDecoration', 'underline');
+                $('div#wrap > div#content > p').css('textDecoration', 'line-through');
+
+                // 후손선택자 - 선택자1 선택자2
+                // css 속성 letter-spacing 글자와 글자 사이 간격
+                // jq css() - letterSpacing
+                $('div#wrap p').css('letterSpacing', '20px');
+
 
         });
         //jq end
