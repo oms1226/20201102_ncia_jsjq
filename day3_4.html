@@ -16,16 +16,87 @@
     </div>
     <hr>
     <div id="buttonBox">
-        <button>버튼1</button>
-        <button>버튼2</button>
+        <button class='btn1'>버튼1</button>
+        <button class='btn2'>버튼2</button>
     </div>
     <hr>
     <div id="linkBox">
         <a href="#">하이퍼링크1</a>
         <a href="#">하이퍼링크2</a>
     </div>
+    <hr>
+    <div id="swapImg">
+        <button class='btn1'>그림1</button> 
+        <button class='btn2'>그림2</button>
+        <button class='btn3'>그림3</button>
+        <br>
+        <img src="smile/baffle.png" alt="baffle.png">
+    </div>
     <script>
         $(function() {
+            // 문서 배경색상 적용 : body는 문서 전체를 통칭함.
+            $('body').css('backgroundColor', 'beige');
+
+            // 이벤트 - click, mouseleave, mouseover, mouseout ...
+            /* $(선택자).이벤트( function() {
+                명려문
+            })*/
+
+            $('buttonBox .btn1').click ( function() {
+                alert('버튼1 클릭');
+                console.log('버튼1 클릭');
+            });
+
+            $('buttonBox .btn2').click ( function() {
+                $('#buttonBox').css('backgroundColor', 'yellow').css('padding','20px');
+            });
+
+            //이미지 투명도 조정
+            // 0.1 ~ 1
+            $('#galleryBox>img').css('opacity', '0.3');
+
+            //마우스 오버 시 진하게
+            $('#galleryBox>img').mouseover( function() {
+                // $('#galleryBox>img').css('opacity', '1');//아래와 같이 변경 가능
+                $(this).css('opacity', '1');//this는 자기 자신임
+            });
+
+            //마우스 아웃 시 흐리게
+            $('#galleryBox>img').mouseout( function() {
+                // $('#galleryBox>img').css('opacity', '0.3');
+                $(this).css('opacity', '0.3');//this는 자기 자신임
+            });
+
+            //클릭 시 경고 상자
+            $('#galleryBox>img').click( function() {
+                alert('이미지 클릭');
+            });
+
+            //하이퍼링크 초기 상태
+            $('#linkBox a').css('color', 'black').css('textDecoration', 'none');
+            $('#linkBox a').mouseover( function() {
+                $(this).css('textDecoration', 'underline');
+            });
+            $('#linkBox a').mouseout( function() {
+                $(this).css('textDecoration', 'none');
+            });
+
+            // 속성 변경 매서드
+            // $(선택자).attr(속성) - get
+            // $(선택자).attr(속성, 값) - set
+            var imgPath = $('#swapImg img').attr('src');
+            console.log('--------------')
+            console.log(imgPath);
+            // 버튼 클릭 시 이미지 src 속성 변경
+            $('#swapImg .btn1').click(function() {
+                $('#swapImg img').attr('src', 'smile/byebye.png');
+            });
+            $('#swapImg .btn2').click(function() {
+                $('#swapImg img').attr('src', 'smile/boss.png');
+            });
+            $('#swapImg .btn3').click(function() {
+                $('#swapImg img').attr('src', 'smile/smile.png');
+            });
 
         });
     </script>
