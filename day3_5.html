@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이펙트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #box1, #box2, #box3, #box4, #box5 {
+            width:100px;
+            height:100px;
+            margin:20px;
+            border:2px solid black;
+            text-align: center;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQ 이펙트</h1>
+    <hr>
+    <!-- div#btnBox>(button.btn${button$})*5 -->
+    <div id="btnBox">
+        <button class="btn1">button1</button>
+        <button class="btn2">button2</button>
+        <button class="btn3">button3</button>
+        <button class="btn4">button4</button>
+        <button class="btn5">button5</button>
+    </div>
+    <hr>
+    <!-- (div#box$>h2{box$})*5 -->
+    <div id="box1">
+        <h2>box1</h2>
+    </div>
+    <div id="box2">
+        <h2>box2</h2>
+    </div>
+    <div id="box3">
+        <h2>box3</h2>
+    </div>
+    <div id="box4">
+        <h2>box4</h2>
+    </div>
+    <div id="box5">
+        <h2>box5</h2>
+    </div>
+    <script>
+        //js영역
+        $(function() {
+            //jq영역
+            //이펙트 메서드
+            //속도는 숫자(밀리세컨드)/slow/fast
+            //$(선택자).hide(속도);
+            //$(선택자).show(속도);
+            //$(선택자).toggle(속도);
+            //$(선택자).fadeIn(속도);
+            //$(선택자).fadeOut(속도);
+            //$(선택자).slideUp(속도);
+            //$(선택자).slideDown(속도);
+
+            $('#box1').hide('slow');
+            $('#box2').toggle(5000);//hide 상태이면, show / show 상태이면, hide
+
+            $('#btnBox>.btn1').click( function() {
+                console.log('btn1 클릭');
+                $('#box1').show('slow');
+                $('#box2').toggle(5000);
+            });
+
+            $('#btnBox>.btn2').click( function() {
+                console.log('btn2 클릭');
+                $('#box3').slideUp('fast');
+            });
+
+            $('#btnBox>.btn3').click( function() {
+                console.log('btn3 클릭');
+                $('#box3').slideDown('fast');
+            });
+
+            $('#btnBox>.btn4').click( function() {
+                console.log('btn4 클릭');
+                $('#box4').fadeOut('slow');
+            });
+
+            $('#btnBox>.btn5').click( function() {
+                console.log('btn5 클릭');
+                $('#box4').fadeIn('slow');
+            });
+
+            //매서드 체이닝
+            //delay(속도)
+            $('#box4').hide('slow').delay(2000).show('slow');
+
+            // 사용자 정의 이팩트
+            /*
+            $(선택자).animate(
+                {속성1:값1, 속성2:값2 ... },
+                속도
+            )
+            */
+            $('#box5').animate(
+                {   'width':'200px',//box 사이즈가 점점 커지는 효과
+                    'height':'200px',
+                    'backgroundColor':'yellow'//적용되지 않더라!
+                },
+                'slow'
+            )
+
+        });
+    </script>
+    
+</body>
+</html>
