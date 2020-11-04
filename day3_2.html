@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <!-- jq 소스 연결 : jquery.com -->
+    <!-- 구글 CDN 3.x snippet: -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- css -->
+    <style>
+        /* */
+    </style>
+</head>
+<body>
+    <!-- JQuery란? 자바스크립트 라이브러리 -->
+    <h1>JQ 설치 확인</h1>
+    <h2>h1태그가 보이지 않으면 jquery 설치 성공</h2>
+    <script>
+    //jq문법
+        //jq start
+        //$(선택자).메소드1().메소드2()...;
+        $(document).ready(function(){
+            //h1 태그 선택자 숨김
+            $('h1').hide();
+            $('h2').hide();
+
+        });
+        //jq end
+    </script>
+</body>
+</html>
