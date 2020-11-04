@@ -48,6 +48,34 @@
             <h3>Result Box</h3>
         </div>
     </form>
+    <hr>
+    <!-- ul>li{목록$}*10 -->
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+        <li>목록6</li>
+        <li>목록7</li>
+        <li>목록8</li>
+        <li>목록9</li>
+        <li>목록10</li>
+    </ul>
+    <hr>
+    <!-- ol>li{목록$}*10 -->
+    <ol>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+        <li>목록6</li>
+        <li>목록7</li>
+        <li>목록8</li>
+        <li>목록9</li>
+        <li>목록10</li>
+    </ol>
     <script>
         //js 영역
         $(function() {
@@ -75,7 +103,7 @@
             var result2Value = $('input:radio').val() //첫번째 선택자의 value 값만 표시, 여러 개인 경우
             console.log(result2Value);
 
-            // text() => 태그 안에 삽입된 텍스트 내용 get
+        // text() => 태그 안에 삽입된 텍스트 내용 get
             // 모든 label 태그의 내용
             var result_label = $('label');
             var result_label_text = $('label').text();//속서에 해당되는 모든 테그의 text들이 다 나온다.
@@ -83,9 +111,25 @@
             console.log(result_label, typeof(result_label));
             console.log(result_label_text, typeof(result_label_text));//day3_3.html:78 UserId : UserPwd : 남자여자홈트레이닝독서요리
 
-            // text(새로운텍스트) => 내요 교체 set
+        // text(새로운텍스트) => 내요 교체 set
+            // 내용 교체
             $('#resultBox').text('새로운 글내용입니다.');
+            // 내용 확인
             console.log($('#resultBox').text());
+
+        // 순서 선택자
+            // 태그명:first-child(인덱스)
+            // 태그명:nth-child(인덱스/odd/even/수식n)
+            // 태그명:last-child(인덱스)
+            $('li:first-child').css('letterSpacing', '20px');
+            $('ul>li:first-child').css('backgroundColor', 'pink');
+            $('ul>li:last-child').css('backgroundColor', 'yellow');
+            $('ul>li:nth-child(2)').css('backgroundColor', 'red').css('color', 'white');
+            // 짝수, 홀수
+            $('ol>li:nth-child(odd)').css('backgroundColor', 'pink');
+            // 3의 배수
+            $('ol>li:nth-child(3n)').css('fontSize', '1.2em');
+            
 
         });
     </script>
