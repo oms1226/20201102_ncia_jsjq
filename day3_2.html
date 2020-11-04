@@ -28,16 +28,20 @@
             <p>가나다라마바사아자카타</p><!-- div#wrap > div#content > p -->
             <p>ABCDEFGHIJKLMN</p>
         </div>
-        <div id="id">
+        <div id="item">
             <ul>
                 <li class="seoul">서울</li>
                 <li class="inchon">인천</li>
-                <li>충정도</li>
+                <!-- div#wrap > div#item > ul > li > span -->
+                <li><span>충</span>정도</li>
                 <li>경기도</li>
                 <li>경상도</li>
-                <li>강원도</li>
+                <!-- div#wrap > div#item > ul > li > span -->
+                <li>강<span>원</span>도</li>
                 <li>제주도</li>
             </ul>
+            <!-- div#wrap > div#item > a > span -->
+            <a href="http://google.com"><span>구글</span>로 이동하기</a>
         </div>
     </div>
 
@@ -93,11 +97,16 @@
                 // textDecoration - 밑줄 속성. underline/line-through/none
                 $('div#wrap>p').css('fontWeight', 'bold').css('textDecoration', 'underline');
                 $('div#wrap > div#content > p').css('textDecoration', 'line-through');
+                $('div#wrap > div#item > ul > li > span').css('backgroundColor', 'yellowgreen')
+                $('div#wrap > div#item > a > span').css('backgroundColor', 'hotpink')
 
                 // 후손선택자 - 선택자1 선택자2
                 // css 속성 letter-spacing 글자와 글자 사이 간격
                 // jq css() - letterSpacing
                 $('div#wrap p').css('letterSpacing', '20px');
+                $('#item span').css('textDecoration', 'line-through').css('letterSpacing', '20px');
+
+ 
 
 
         });
