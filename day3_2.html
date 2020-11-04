@@ -11,9 +11,9 @@
     <script src="jq/jquery.min.js"></script>
     <!-- css -->
     <style>
-        /* 문서의 글자 속성 */
         /* 선택자 {속성:값} */
-        * {font-size: 2em;}
+            /* 문서의 글자 속성 */
+            * {font-size: 2em;}
     </style>
 </head>
 <body>
@@ -56,12 +56,30 @@
             // 아이디 선택자(#아이디) : id 속성을 통해 태그 객체를 가져온다.
             // 클래스 선택자(.클래스) : class 속성을 통해 태그 객체를 가져온다.
 
-            // css 메서드 : 선택자의 CSS 디자인 적용
-            // $(선택자).css(속성, 값);
-            // $(선택자).css(속성);
+                // css 메서드 : 선택자의 CSS 디자인 적용
+                // $(선택자).css(속성, 값);
+                // $(선택자).css(속성);
 
-            // 전체 선택자(*) : html 문서의 모든 것
-            // 글자 크기
+                // 전체 선택자(*) : html 문서의 모든 것
+                // references: https://www.w3schools.com/jquery/jquery_ref_html.asp
+                // 1em = 100%
+                // 글자 크기(fontSize)를 1.1em
+                // 글자 색상(color)
+                $('*').css('fontSize', '1.1em').css('color','brown');
+
+                // 태그이름 선택자(태그이름)
+                // $('태그명').css('속성', '값');
+                // 문서에 삽입된 모든 p 태그에 글자크기, 색상 변경
+                $('p').css('fontSize', '0.9em').css('color', 'blue');
+
+                // 아이디 선택자(#아이디) 
+                // $('#아이디명').css('속성', '값');
+                $('#content').css('backgroundColor', 'yellow');
+
+                // 클래스 선택자(.클래스)
+                // $('.클래스명').css('속성', '값');
+                $('.seoul').css('backgroundColor', 'black').css('color','white');
+
         });
         //jq end
     </script>
