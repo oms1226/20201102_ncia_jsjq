@@ -43,6 +43,10 @@
         <!-- 폼버튼 -->
         <input type="submit" value="전송">
         <input type="reset" value="취소">
+        <hr>
+        <div id="resultBox">
+            <h3>Result Box</h3>
+        </div>
     </form>
     <script>
         //js 영역
@@ -66,10 +70,22 @@
             console.log(result);//홈트레이닝
             $('input:checkbox').css('letterSpacing', '20px');//체크박스는 스타일이 적용되지 않터라
 
-            var result2 = $('input:radio')
+            var result2 = $('input:radio') //배열 선택자 정보로 출력
             console.log(result2);
-            var result2Value = $('input:radio').val()
+            var result2Value = $('input:radio').val() //첫번째 선택자의 value 값만 표시, 여러 개인 경우
             console.log(result2Value);
+
+            // text() => 태그 안에 삽입된 텍스트 내용 get
+            // 모든 label 태그의 내용
+            var result_label = $('label');
+            var result_label_text = $('label').text();//속서에 해당되는 모든 테그의 text들이 다 나온다.
+            console.log('---------------');
+            console.log(result_label, typeof(result_label));
+            console.log(result_label_text, typeof(result_label_text));//day3_3.html:78 UserId : UserPwd : 남자여자홈트레이닝독서요리
+
+            // text(새로운텍스트) => 내요 교체 set
+            $('#resultBox').text('새로운 글내용입니다.');
+            console.log($('#resultBox').text());
 
         });
     </script>
